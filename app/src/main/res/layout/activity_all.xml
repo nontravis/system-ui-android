@@ -6,136 +6,146 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <android.support.constraint.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/border_secondary"
-        android:fitsSystemWindows="false"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
-
-
-        <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/btn_back"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="6dp"
-            app:layout_constraintBottom_toTopOf="@+id/root"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+        android:layout_height="match_parent">
 
 
         <LinearLayout
-            android:id="@+id/root"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@drawable/border_primary"
-            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_secondary"
             android:orientation="vertical"
-            android:padding="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_back"
-            tools:ignore="HardcodedText">
-
-            <TextView
-                android:id="@+id/tv_debug_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            tools:context=".MainActivity">
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Window Decor View"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-            <TextView
-                android:id="@+id/tv_debug_android_decor_view_position"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/tv_debug_android_decor_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Android Content Root"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-            <TextView
-                android:id="@+id/tv_debug_android_content_root_position"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/tv_debug_android_content_root"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="App Content Root"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-            <TextView
-                android:id="@+id/tv_debug_content_root_position"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/tv_debug_content_root"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Window Insets [ left, right,  top, bottom]"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="6dp"
+                app:layout_constraintBottom_toTopOf="@+id/root"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
 
 
-            <TextView
-                android:id="@+id/tv_debug_insets"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No Insets" />
+            <LinearLayout
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_primary"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_back"
+                tools:ignore="HardcodedText">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Density"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                <TextView
+                    android:id="@+id/tv_debug_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
 
-            <TextView
-                android:id="@+id/tv_debug_density"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Window Decor View"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                <TextView
+                    android:id="@+id/tv_debug_android_decor_view_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_debug_android_decor_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Android Content Root"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                <TextView
+                    android:id="@+id/tv_debug_android_content_root_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_debug_android_content_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="App Content Root"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                <TextView
+                    android:id="@+id/tv_debug_content_root_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_debug_content_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Window Insets [ left, right,  top, bottom]"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+
+                <TextView
+                    android:id="@+id/tv_debug_insets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Insets" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Density"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+
+                <TextView
+                    android:id="@+id/tv_debug_density"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
         <com.thekhaeng.systemui.view.SystemUISpaceView
             android:id="@+id/status_bar_space"
             style="@style/SystemUISpace.Top"
+            android:layout_gravity="top"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_height="20dp" />
 
         <com.thekhaeng.systemui.view.SystemUISpaceView
             android:id="@+id/left_space"
             style="@style/SystemUISpace.Left"
+            android:layout_gravity="left"
             app:layout_constraintBottom_toTopOf="@+id/navigation_bar_space"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/status_bar_space"
@@ -144,6 +154,7 @@
         <com.thekhaeng.systemui.view.SystemUISpaceView
             android:id="@+id/right_space"
             style="@style/SystemUISpace.Right"
+            android:layout_gravity="right"
             app:layout_constraintBottom_toTopOf="@+id/navigation_bar_space"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/status_bar_space"
@@ -152,9 +163,10 @@
         <com.thekhaeng.systemui.view.SystemUISpaceView
             android:id="@+id/navigation_bar_space"
             style="@style/SystemUISpace.Bottom"
+            android:layout_gravity="bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_height="20dp" />
 
 
-    </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
 </android.support.v4.widget.NestedScrollView>

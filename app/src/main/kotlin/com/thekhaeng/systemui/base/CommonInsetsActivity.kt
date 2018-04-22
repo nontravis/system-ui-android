@@ -81,7 +81,8 @@ abstract class CommonInsetsActivity : AppCompatActivity() {
                     root.setPadding(root.paddingLeft + windowInsets.systemWindowInsetLeft,
                             root.paddingTop + windowInsets.systemWindowInsetTop,
                             root.paddingRight + windowInsets.systemWindowInsetRight,
-                            root.paddingBottom + windowInsets.systemWindowInsetBottom)
+                            root.paddingBottom + windowInsets.systemWindowInsetBottom
+                    )
 
                     btnBack.addMargin(left = windowInsets.systemWindowInsetLeft,
                             top = windowInsets.systemWindowInsetTop,
